@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <img alt="Vue logo" src="../assets/logo.png" />
+        <div class="avatar"></div>
         <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
     </div>
 </template>
@@ -28,11 +28,18 @@ export default class Home extends Vue {
 </script>
 
 <style lang="scss">
-img:hover {
-    transform: rotate(666turn);
-    transition-delay: 1s;
-    transition-property: all;
-    transition-duration: 59s;
-    transition-timing-function: cubic-bezier(0.34, 0, 0.84, 1);
+.avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: url('../assets/avatar.jpeg') no-repeat;
+    background-size: cover;
+    &:hover {
+        transform: rotateZ(360deg);
+        transition-property: all;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(0.34, 0, 0.84, 1);
+    }
 }
 </style>
