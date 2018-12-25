@@ -1,7 +1,7 @@
 <template>
     <div class="hello">
         <h1>{{ msg }}</h1>
-        <h1>Hello World！</h1>
+        <h1 @click="onClick">{{ message }}</h1>
     </div>
 </template>
 
@@ -11,6 +11,14 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component
 export default class HelloWorld extends Vue {
     @Prop() private msg!: string
+    data() {
+        return {
+            message: 'hello world!'
+        }
+    }
+    onClick() {
+        this.$emit('alert')
+    }
 }
 </script>
 
