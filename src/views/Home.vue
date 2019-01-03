@@ -34,7 +34,7 @@ export default class Home extends Vue {
         height: 100px;
         margin: 0 auto;
         border-radius: 50%;
-        background: url('../assets/logo.jpeg') no-repeat;
+        background: url('../assets/avatar.jpeg') no-repeat;
         background-size: cover;
         transform: rotateZ(0deg);
         transition-property: transform;
