@@ -1,26 +1,43 @@
 <template>
     <div id="app">
+        <BlackHole></BlackHole>
         <div id="nav">
-            <router-link to="/">我的简历</router-link> |
-            <router-link to="/about">个人简介</router-link>
+            <router-link to="/">Home</router-link> |
+            <router-link to="/about">Page</router-link>
         </div>
         <router-view />
     </div>
 </template>
 
+<script>
+import { Component, Vue } from 'vue-property-decorator'
+import BlackHole from '@/components/BlackHole.vue' // @ is an alias to /src
+@Component({
+    components: {
+        BlackHole
+    }
+})
+export default class App extends Vue {}
+</script>
+
 <style lang="scss">
-html {
-    background-color: #666;
-}
+@import './theme/global.scss';
+@import './theme/variable.scss';
 #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    background-color: $theme-bgcolor;
+    padding-bottom: 100px;
+    min-height: 100%;
 }
+
 #nav {
     padding: 30px;
+    background-color: rgb(199, 100, 125);
+    box-shadow: 0 0 2px 2px rgba(199, 100, 125, 0.3);
     a {
         font-weight: bold;
         color: #2c3e50;
