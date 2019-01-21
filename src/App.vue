@@ -46,4 +46,41 @@ export default class App extends Vue {}
         }
     }
 }
+
+@media (min-width: 1401px) {
+    #app {
+        width: 1080px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1400px) {
+    #app {
+        margin-left: 160px;
+        margin-right: 160px;
+    }
+}
+
+@media (max-width: 1280px) and (min-width: 1025px) {
+    #app {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    #app {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 500px) {
+    #app {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
 </style>

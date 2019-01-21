@@ -10,13 +10,20 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component
 export default class BlackHole extends Vue {
     mounted() {
-        let width = 800
+        let rotateZ = 0,
+            width = 800
         const dom: any = this.$refs.blackhole
-        dom.style.transform = 'rotateZ(3turn)'
         setInterval(() => {
-            width -= 10
+            rotateZ += 2
+            if (rotateZ > 360) {
+                rotateZ = 0
+            }
+            dom.style.transform = `rotateZ(${rotateZ}deg)`
+        }, 36)
+        setInterval(() => {
+            width = width > 700 ? 700 : 800
             dom.style.width = width + 'px'
-        }, 100)
+        }, 3000)
     }
 }
 </script>
@@ -38,10 +45,8 @@ export default class BlackHole extends Vue {
         bottom: 0;
         margin: auto;
         width: 800px;
-        transition: transform 9s;
-        &:hover {
-            transform: rotateZ(3turn);
-        }
+        transition: width 3s;
+        transition-timing-function: cubic-bezier(0.34, 0, 0.84, 1);
     }
 }
 </style>
