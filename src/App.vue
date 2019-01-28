@@ -1,23 +1,44 @@
 <template>
     <div id="app">
-        <BlackHole></BlackHole>
-        <div id="nav">
-            <router-link to="/">Home</router-link> |
-            <router-link to="/about">Page</router-link>
+        <BlackHole ref="blackhole" :scale="scale"></BlackHole>
+        <div :class="{ dropApp: drop, appContent: true }">
+            <div id="nav">
+                <router-link to="/">Home</router-link> |
+                <router-link to="/about">Page</router-link>
+            </div>
+            <router-view />
         </div>
-        <router-view />
+        <Drop :drop="drop" @click="onDropClick"></Drop>
     </div>
 </template>
 
 <script>
 import { Component, Vue } from 'vue-property-decorator'
 import BlackHole from '@/components/BlackHole.vue' // @ is an alias to /src
+import Drop from '@/components/Drop.vue' // @ is an alias to /src
 @Component({
     components: {
-        BlackHole
+        BlackHole,
+        Drop
     }
 })
-export default class App extends Vue {}
+export default class App extends Vue {
+    drop = false
+    scale = false
+    timeoutId = 0
+    onDropClick() {
+        if (this.scale) return
+        if (this.drop) {
+            this.drop = false
+            return
+        }
+        this.drop = true
+        this.scale = true
+        this.timeoutId = setTimeout(() => {
+            this.scale = false
+        }, 5000)
+    }
+}
 </script>
 
 <style lang="scss">
@@ -34,9 +55,19 @@ export default class App extends Vue {}
     min-height: 100%;
 }
 
+.appContent {
+    transform: rotateZ(0) scale(1);
+    transition: transform 5s;
+}
+
+.dropApp {
+    transform-origin: 50% 110%;
+    transform: rotateZ(3turn) scale(0);
+}
+
 #nav {
     padding: 30px;
-    background-color: rgb(199, 100, 125);
+    background-color: $theme-color;
     box-shadow: 0 0 2px 2px rgba(199, 100, 125, 0.3);
     a {
         font-weight: bold;

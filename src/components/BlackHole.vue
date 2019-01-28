@@ -1,6 +1,11 @@
 <template>
-    <div class="black-hole">
-        <img ref="blackhole" src="../assets/blackhole.png" alt="黑洞" />
+    <div class="black-hole" v-show="scale">
+        <img
+            ref="blackhole"
+            :class="{ scale }"
+            src="../assets/blackhole.png"
+            alt="黑洞"
+        />
     </div>
 </template>
 
@@ -9,22 +14,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component
 export default class BlackHole extends Vue {
-    mounted() {
-        let rotateZ = 0,
-            width = 800
-        const dom: any = this.$refs.blackhole
-        setInterval(() => {
-            rotateZ += 2
-            if (rotateZ > 360) {
-                rotateZ = 0
-            }
-            dom.style.transform = `rotateZ(${rotateZ}deg)`
-        }, 36)
-        setInterval(() => {
-            width = width > 700 ? 700 : 800
-            dom.style.width = width + 'px'
-        }, 3000)
-    }
+    @Prop() scale = false
 }
 </script>
 
@@ -45,8 +35,27 @@ export default class BlackHole extends Vue {
         bottom: 0;
         margin: auto;
         width: 800px;
-        transition: width 3s;
-        transition-timing-function: cubic-bezier(0.34, 0, 0.84, 1);
+        transform: rotateZ(0);
+        transition: transform 5s linear;
+    }
+    .scale {
+        animation: animate 5s linear;
+        transform: rotateZ(2turn);
+    }
+}
+
+@keyframes animate {
+    from {
+        width: 800px;
+    }
+    30% {
+        width: 600px;
+    }
+    70% {
+        width: 800px;
+    }
+    to {
+        width: 400px;
     }
 }
 </style>
