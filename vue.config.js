@@ -1,4 +1,4 @@
 module.exports = {
-    baseUrl: '/resume/liuz',
-    outputDir: 'liuz'
+    baseUrl: '/resume/zoenleo',
+    outputDir: 'zoenleo'
 }
