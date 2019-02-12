@@ -1,7 +1,7 @@
 <template>
     <div class="home">
         <div class="avatar"></div>
-        <Me :msg="msg" @alert="alert" />
+        <Me />
     </div>
 </template>
 
@@ -13,17 +13,7 @@ import Me from '@/components/Me.vue' // @ is an alias to /src
         Me
     }
 })
-export default class Home extends Vue {
-    private msg: string = ''
-    data() {
-        return {
-            msg: 'Welcome to Your Vue.js + TypeScript App'
-        }
-    }
-    alert(e: Event) {
-        this.msg = 'alert'
-    }
-}
+export default class Home extends Vue {}
 </script>
 
 <style lang="scss">

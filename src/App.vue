@@ -1,14 +1,12 @@
 <template>
     <div id="app">
-        <BlackHole ref="blackhole" :scale="scale"></BlackHole>
         <div :class="{ dropApp: drop, appContent: true }">
             <div id="nav">
-                <router-link to="/">Home</router-link> |
-                <router-link to="/about">Page</router-link>
+                <router-link to="/">个人简介</router-link> |
+                <router-link to="/about">专业技能</router-link>
             </div>
             <router-view />
         </div>
-        <Drop :drop="drop" @click="onDropClick"></Drop>
     </div>
 </template>
 
