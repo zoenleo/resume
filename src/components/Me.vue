@@ -29,6 +29,11 @@
             热爱开源，有在写自己的技术博客，常看掘金、gitbub、奇舞周刊、知乎，贡献过npm开源项目。
         </p>
         <p>对代码有一定要求，常常推动现在公司代码规范进步，喜欢code review。</p>
+        <p>
+            联系方式：<a href="mailto:lz271253196@gmail.com"
+                >lz271253196@gmail.com</a
+            >
+        </p>
     </div>
 </template>
 

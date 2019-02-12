@@ -1,31 +1,39 @@
-# resume
+# 刘重的个人简历
 
-## Project setup
-```
-yarn install
-```
+##个人简介
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+刘重，1992年生，湖南长沙人。15年于长沙理工大学毕业，现居于深圳，就职于跨越速运集团，<b>前端开发工程师</b>。
 
-### Compiles and minifies for production
-```
-yarn run build
-```
+毕业怀着一颗北漂梦去了北京，进入了我正式职业生涯的第一家公司 超图软件 ，也是作为前端开发。公司平台很大，非常感谢公司的知遇之恩，也常常怀念公司老同事，后因环境和个人原因离开了北京。
 
-### Run your tests
-```
-yarn run test
-```
+17年到广州就职 阿米巴网络科技有限公司，公司很有活力，纯互联网公司，老大是从阿里出来的创业者，口才与技术并重。在阿米巴度过了我职业生涯中最大的提升期，感谢立哥老大的信任与培养。
 
-### Lints and fixes files
-```
-yarn run lint
-```
+后来在朋友的邀请下来到了深圳，也是我最喜欢的一个城市，入职我现在的公司 跨越速运集团 ，职位前端开发组长。
 
-### Run your unit tests
-```
-yarn run test:unit
-```
+喜欢折腾，希望未来能以技术做出自己满意的东西。
+
+热爱开源，有在写自己的技术博客，常看掘金、gitbub、奇舞周刊、知乎，贡献过npm开源项目。
+
+对代码有一定要求，常常推动现在公司代码规范进步，喜欢code review。
+
+联系方式：lz271253196@gmail.com
+
+## 专业技能
+
+熟悉html、js、css基础，并且能熟练使用html5、css3、es6、es7、typescript。
+
+熟悉各大主流框架，使用过Jquery、zepto等传统型框架，也写过angular1、vue、react等mvc/mvvm框架项目，当前主要工作框架是react、vue。
+
+会写css预处理语言，常用less和sass。
+
+使用webpack/gulp搭建项目，常常参与公司项目架构。
+
+写过PC网页、移动端、微信公众号、微信小程序、react-native APP、chrome浏览器插件，并且都有线上项目。
+
+能熟练使用git作为版本控制工具，经常使用github分享一些自己的代码。
+
+为微信小程序写过开源库，并在npm上发布。 了解命令行的常用操作。
+
+有自己的掘金博客，并且常在上面写一些文章。
+
+拥有自己的vps服务器，做过基于爬虫的小说网站后来搁置，现在服务器上放的是写给女朋友的信和搭建科学上网工具。
