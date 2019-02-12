@@ -27,7 +27,7 @@
     font-size: 20px;
     padding-top: 50px;
     color: #606c71;
-    line-height: 20px;
+    line-height: 26px;
     p {
         padding: 10px 20px;
     }

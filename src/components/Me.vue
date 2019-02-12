@@ -8,7 +8,7 @@
             毕业，现居于深圳，就职于跨越速运集团，前端开发工程师。
         </p>
         <p>
-            毕业怀着一颗北漂梦去了北京，进入了我正式职业生涯的第一家公司
+            毕业怀着一颗个漂梦去了北京，进入了我正式职业生涯的第一家公司
             <a href="https://www.supermap.com/cn/" target="_blank">超图软件</a>
             ，也是作为前端开发。公司平台很大，非常感谢公司的知遇之恩，也常常怀念公司老同事，后因环境和个人原因离开了北京。
         </p>
@@ -50,11 +50,10 @@ export default class HelloWorld<HelloWorldProps> extends Vue {
 .me {
     padding-top: 50px;
     text-align: left;
-    font-size: 16px;
     padding-top: 50px;
     font-size: 20px;
     color: #606c71;
-    line-height: 20px;
+    line-height: 26px;
     p {
         padding: 10px 20px;
     }
