@@ -52,7 +52,8 @@ export default class HelloWorld<HelloWorldProps> extends Vue {
     text-align: left;
     font-size: 16px;
     padding-top: 50px;
-    color: #333;
+    font-size: 20px;
+    color: #606c71;
     line-height: 20px;
     p {
         padding: 10px 20px;

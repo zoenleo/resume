@@ -24,9 +24,9 @@
 <style lang="scss">
 .about {
     text-align: left;
-    font-size: 16px;
+    font-size: 20px;
     padding-top: 50px;
-    color: #333;
+    color: #606c71;
     line-height: 20px;
     p {
         padding: 10px 20px;
